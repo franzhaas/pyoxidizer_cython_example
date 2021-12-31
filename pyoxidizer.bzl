@@ -25,13 +25,13 @@ def make_exe():
         config=python_config,
     )
 
-    exe.tcl_files_path = "lib"
+    #exe.tcl_files_path = "lib"
 
     exe.windows_runtime_dlls_mode = "always"
 
     exe.windows_subsystem = "console"
 
-    exe.add_python_resources(exe.pip_install(["./cython_example_fib-0.0.0-cp39-cp39-win_amd64.whl"]))
+    exe.add_python_resources(exe.pip_install(["./fib-0.0.0-cp39-cp39-win_amd64.whl"]))
 
     return exe
 
